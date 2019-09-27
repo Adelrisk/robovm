@@ -64,11 +64,11 @@ import org.robovm.apple.uikit.*;
      * @since Available in iOS 10.0 and later.
      */
     @Bridge(symbol="CGColorConversionInfoCreate", optional=true)
-    public static native CGColorConversionInfo create(CGColorSpace src, CGColorSpace dst);
+    public static native @org.robovm.rt.bro.annotation.Marshaler(CFType.NoRetainMarshaler.class) CGColorConversionInfo create(CGColorSpace src, CGColorSpace dst);
     /**
      * @since Available in iOS 13.0 and later.
      */
     @Bridge(symbol="CGColorConversionInfoCreateWithOptions", optional=true)
-    public static native CGColorConversionInfo createWithOptions(CGColorSpace src, CGColorSpace dst, NSDictionary options);
+    public static native @org.robovm.rt.bro.annotation.Marshaler(CFType.NoRetainMarshaler.class) CGColorConversionInfo createWithOptions(CGColorSpace src, CGColorSpace dst, NSDictionary options);
     /*</methods>*/
 }
