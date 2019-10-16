@@ -47,10 +47,22 @@ import org.robovm.apple.uikit.*;
     /*<bind>*/
     /*</bind>*/
     /*<constants>*//*</constants>*/
-    /*<constructors>*//*</constructors>*/
+    /*<constructors>*/
+    public CAFFileHeader() {}
+    public CAFFileHeader(AudioFileType fileType, short fileVersion, short fileFlags) {
+        this.setFileType(fileType);
+        this.setFileVersion(fileVersion);
+        this.setFileFlags(fileFlags);
+    }
+    /*</constructors>*/
     /*<properties>*//*</properties>*/
     /*<members>*/
-    
+    @StructMember(0) public native AudioFileType getFileType();
+    @StructMember(0) public native CAFFileHeader setFileType(AudioFileType fileType);
+    @StructMember(1) public native short getFileVersion();
+    @StructMember(1) public native CAFFileHeader setFileVersion(short fileVersion);
+    @StructMember(2) public native short getFileFlags();
+    @StructMember(2) public native CAFFileHeader setFileFlags(short fileFlags);
     /*</members>*/
     /*<methods>*//*</methods>*/
-}
+    }
