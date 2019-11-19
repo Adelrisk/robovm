@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,11 +24,10 @@
     </issueManagement>
 
     <scm>
-        <url>https://github.com/MobiVM/robovm</url>
-        <connection>scm:git:https://github.com/MobiVM/robovm.git</connection>
-        <developerConnection>scm:git:git@github.com:mobidevelop/robovm.git</developerConnection>
-    </scm>
-
+        <url>https://github.com/Adelrisk/robovm</url>
+        <connection>scm:git:https://github.com/Adelrisk/robovm.git</connection>
+        <developerConnection>scm:git:git@github.com:Adelrisk/robovm.git</developerConnection>
+  </scm>
 
     <properties>
         <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
@@ -319,7 +317,7 @@
 
     <!-- start of: entries from sonatype oss-parent-->
     <repositories>
-        <repository>
+         <repository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -329,20 +327,30 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+	</repository>
+        <repository>
+            <id>openecard-repos</id>
+            <name>Openecard Release Repo</name>
+            <url>https://mvn.ecsec.de/repository/openecard-release</url>
         </repository>
     </repositories>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+
+   <distributionManagement>
+		<site>
+			<id>Open eCard Website</id>
+			<url>https://dev.openecard.org/TODO</url>
+		</site>
+		<repository>
+			<id>openecard-repos</id>
+			<name>Openecard Release Repo</name>
+			<url>https://mvn.ecsec.de/repository/openecard-release</url>
+		</repository>
+		<snapshotRepository>
+			<id>openecard-repos</id>
+			<name>Openecard Snapshot Repo</name>
+			<url>https://mvn.ecsec.de/repository/openecard-snapshot</url>
+		</snapshotRepository> 
+   </distributionManagement>
     <!-- end of: entries from sonatype oss-parent-->
 
     <!--  -->
